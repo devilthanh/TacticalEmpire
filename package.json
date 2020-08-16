@@ -1,6 +1,6 @@
 {
   "name": "tacticalempire",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "TacticalEmpire.com",
   "author": "Poddy",
   "main": "./main.js",
@@ -11,7 +11,7 @@
     "build": "electron-builder",
     "release": "electron-builder --publish always && rmdir setup /q/s"
   },
-  "repository": "github:devilthanh/MakerBlockly",
+  "repository": "github:devilthanh/TacticalEmpire",
   "build": {
     "appId": "com.random8pixels.tacticalempire",
     "productName": "Tactical Empire",
@@ -20,7 +20,7 @@
         "provider": "github",
         "repo": "TacticalEmpire",
         "owner": "devilthanh",
-        "token": "0066b5933523b58c443d8c2cddd68a302716e725",
+        "token": "94864cf85e7ef57f33711c17b3fbf8c231278273",
         "private": false,
         "publishAutoUpdate": true
       }

@@ -2,6 +2,13 @@
 <html>
     <head>
         <title>Checking for update</title>
+        <script>
+            const {ipcRenderer} = require('electron');
+
+            ipcRenderer.on('status', (event, text) => {
+                document.getElementById('status').innerHTML = text;
+            });
+        </script>
     </head>
     <body>
 

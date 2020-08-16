@@ -60,7 +60,8 @@ autoUpdater.on('checking-for-update', () => {
 });
 
 autoUpdater.on('update-available', (info) => {
-	clientWindow.webContents.send('status', 'Update found...');
+	clientWindow.webContents.send('status', 'Update found v.' + info.version);
+	clientWindow.webContents.send('info', info.toS);
 });
 
 autoUpdater.on('update-not-available', (info) => {
