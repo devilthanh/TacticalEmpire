@@ -1,3 +1,10 @@
 .screen {
     display: none;
+    text-align: center;
+}
+
+.screen_label {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 100px;
 }

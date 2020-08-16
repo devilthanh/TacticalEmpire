@@ -11,26 +11,33 @@
 
     <body>
         <div id='screenWrapper'>
+            <div id='loginScreen' class='screen'>
+                <div class='screen_label'>login screen</div>
+                <div>Enter name:</div>
+                <input id='input_name' type='text'>
+                <button onclick='loginButton()'>Login</button>
+            </div>
+
             <div id='mainScreen' class='screen'>
-                <div>main screen</div>
+                <div class='screen_label'>main screen</div>
                 <button onclick='hostButton()'>Host</button>
                 <button onclick='joinButton()'>Join</button>
             </div>
 
             <div id='hostScreen' class='screen'>
-                <div>host screen</div>
+                <div class='screen_label'>host screen</div>
                 <button onclick='backButton()'>Back</button>
             </div>
             <div id='browseScreen' class='screen'>
-                <div>browse screen</div>
+                <div class='screen_label'>browse screen</div>
                 <button onclick='backButton()'>Back</button>
             </div>
             <div id='lobbyScreen' class='screen'>
-                <div>lobby screen</div>
+                <div class='screen_label'>lobby screen</div>
                 <button onclick='backButton()'>Back</button>
             </div>
             <div id='gameScreen' class='screen'>
-                <div>game screen</div>
+                <div class='screen_label'>game screen</div>
 
             </div>
         </div>

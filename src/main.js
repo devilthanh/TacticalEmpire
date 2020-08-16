@@ -18,17 +18,6 @@ class Player {
 var myPlayer = new Player();
 var backStack = [];
 
-onLoad = function(){
-
-    var name = null;
-    do{
-        name = prompt("Please enter your name", "Harry Potter");
-    }while (name == null);
-
-    myPlayer.name = name;
-
-}
-
 changeScreen = function(screen){
     var list = document.getElementsByClassName('screen');
     for(var i=0; i < list.length; i++){
@@ -40,6 +29,13 @@ changeScreen = function(screen){
         }
     }
 
+}
+
+loginButton = function(){
+    if(document.getElementById('input_name').value.length > 0){
+        myPlayer.name = document.getElementById('input_name').value;
+        changeScreen('mainScreen');
+    }
 }
 
 hostButton = function(){
@@ -57,5 +53,4 @@ backButton = function(){
     }
 }
 
-onLoad();
-changeScreen('mainScreen');
+changeScreen('loginScreen');

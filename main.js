@@ -6,9 +6,11 @@ const http = require('http');
 const fileManager = require('fs');
 const {autoUpdater} = require("electron-updater");
 
+const DEBUG = true;
 
 let clientWindow, gameWindow;
 var isLoaded = false;
+
 // const gotTheLock = app.requestSingleInstanceLock();
 
 // if (!gotTheLock) {
@@ -21,7 +23,10 @@ var isLoaded = false;
 		// }
 	// })
 
-app.on('ready',createClientWindow);
+if(DEBUG){
+	isLoaded = true;
+	app.on('ready', createGameWindow);
+}else app.on('ready', createClientWindow);
 
 app.on('window-all-closed', ()=>{
 	if (process.platform !== 'darwin') {
@@ -108,7 +113,8 @@ function createClientWindow(){
 function createGameWindow(){
 	app.allowRendererProcessReuse = true;
 	gameWindow = new BrowserWindow({width: 1280, height: 720, show: false, webPreferences: {nodeIntegration: true}});
-	clientWindow.destroy();
+	
+	if(!DEBUG) clientWindow.destroy();
 	//Menu.setApplicationMenu(null);
 	
 	//gameWindow.webContents.on("devtools-opened", () => { gameWindow.webContents.closeDevTools(); });
