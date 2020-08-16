@@ -1,0 +1,50 @@
+{
+  "name": "tacticalempire",
+  "version": "0.0.0",
+  "description": "TacticalEmpire.com",
+  "author": "Poddy",
+  "main": "./main.js",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron .",
+    "package": "electron-builder --dir",
+    "build": "electron-builder",
+    "release": "electron-builder --publish always && rmdir setup /q/s"
+  },
+  "repository": "github:devilthanh/MakerBlockly",
+  "build": {
+    "appId": "com.random8pixels.tacticalempire",
+    "productName": "Tactical Empire",
+    "publish": [
+      {
+        "provider": "github",
+        "repo": "TacticalEmpire",
+        "owner": "devilthanh",
+        "token": "0066b5933523b58c443d8c2cddd68a302716e725",
+        "private": false,
+        "publishAutoUpdate": true
+      }
+    ],
+    "directories": {
+      "output": "setup"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.4"
+  },
+  "devDependencies": {
+    "electron": "^9.2.0",
+    "electron-builder": "^22.8.0"
+  }
+}
