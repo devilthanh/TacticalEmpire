@@ -1,6 +1,6 @@
 {
   "name": "tacticalempire",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "TacticalEmpire.com",
   "author": "Poddy",
   "main": "./main.js",
@@ -20,7 +20,7 @@
         "provider": "github",
         "repo": "TacticalEmpire",
         "owner": "devilthanh",
-        "token": "94864cf85e7ef57f33711c17b3fbf8c231278273",
+        "token": "09c9b89a785139ff3d92af79e422d0b6a38f3f1d",
         "private": false,
         "publishAutoUpdate": true
       }

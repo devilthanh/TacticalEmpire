@@ -60,7 +60,7 @@ autoUpdater.on('checking-for-update', () => {
 });
 
 autoUpdater.on('update-available', (info) => {
-	clientWindow.webContents.send('status', 'Update found v.' + info.version);
+	clientWindow.webContents.send('status', 'Update found v.' + info.version + '\nGetting to download...');
 	clientWindow.webContents.send('info', info.toS);
 });
 
@@ -83,7 +83,7 @@ autoUpdater.on('download-progress', (progressObj) => {
 });
 
 autoUpdater.on('update-downloaded', (info) => {
-	// mainWindow.webContents.send('output', 'Update downloaded.\n');
+	autoUpdater.quitAndInstall();
 })
 // }
 
