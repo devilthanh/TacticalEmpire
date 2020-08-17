@@ -13,35 +13,50 @@
         <div id='screenWrapper'>
             <div id='loginScreen' class='screen'>
                 <div class='screen_label'>login screen</div>
-                <div>Enter name:</div>
-                <input id='input_name' type='text'>
-                <button onclick='loginButton()'>Login</button>
+                <div id='loginWrapper' class='centerWrapper'>
+                    <input id='input_name' type='text' placeholder='Enter name'>
+                    <button onclick='loginButton()'>Login</button>
+                </div>
             </div>
 
             <div id='mainScreen' class='screen'>
                 <div class='screen_label'>main screen</div>
-                <button onclick='hostButton()'>Host</button>
-                <button onclick='joinButton()'>Join</button>
+                <div id='mainWrapper' class='centerWrapper'>
+                    <button onclick='hostButton()'>Host</button>
+                    <button onclick='joinButton()'>Join</button>
+                </div>
+                <button class='button_back' onclick='backButton()'>Back</button>
             </div>
 
             <div id='hostScreen' class='screen'>
                 <div class='screen_label'>host screen</div>
-                <button onclick='backButton()'>Back</button>
+                <button class='button_back' onclick='backButton()'>Back</button>
             </div>
             <div id='browseScreen' class='screen'>
                 <div class='screen_label'>browse screen</div>
-                <button onclick='backButton()'>Back</button>
+                <div class='centerWrapper'>
+                    <div class='incenterWrapper'>
+                        <div id='lobbies'></div>
+                        <div id='connectWrapper'>
+                            <input id='input_ip' type='text' placeholder="IP Address">
+                            <input id='input_port' type='text' placeholder="Port">
+                            <button onclick='connectButton()'>Connect</button>
+                            <button onclick='refreshButton()'>Refresh</button>
+                        </div>
+                    </div>
+                </div>
+                <button class='button_back' onclick='backButton()'>Back</button>
             </div>
             <div id='lobbyScreen' class='screen'>
                 <div class='screen_label'>lobby screen</div>
-                <button onclick='backButton()'>Back</button>
+                <button class='button_back' onclick='backButton()'>Back</button>
             </div>
             <div id='gameScreen' class='screen'>
                 <div class='screen_label'>game screen</div>
 
             </div>
         </div>
-        <script src='./main.js'></script>
         <script src='./network.js'></script>
+        <script src='./main.js'></script>
     </body>
 </html> 

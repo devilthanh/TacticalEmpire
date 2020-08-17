@@ -7,4 +7,90 @@
     font-weight: bold;
     font-size: 50px;
     margin-bottom: 100px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.button_back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#input_name {
+    margin-right: 10px;
+}
+
+#input_ip {
+    width: 100px;
+}
+
+#input_port {
+    width: 50px;
+}
+
+.centerWrapper {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+} #loginWrapper, #mainWrapper{
+    top: -20%;
+}
+
+
+.incenterWrapper {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#lobbies {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px;;
+}
+
+.lobby {
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    margin-bottom: 5px;;
+    padding: 0px;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+}
+
+.lobby div {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lobby:hover {
+    background: rgb(0, 182, 0);
+}
+
+.lobby:active {
+    background: green;
+}
+
+#connectWrapper {
+    display: inline-block;
+    text-align: right;
 }

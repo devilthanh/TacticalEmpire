@@ -15,7 +15,8 @@ class Player {
     }
 }
 
-var myPlayer = new Player();
+var myClient = new Client();
+var myServer = null;
 var backStack = [];
 
 changeScreen = function(screen){
@@ -33,7 +34,7 @@ changeScreen = function(screen){
 
 loginButton = function(){
     if(document.getElementById('input_name').value.length > 0){
-        myPlayer.name = document.getElementById('input_name').value;
+        myClient.name = document.getElementById('input_name').value;
         changeScreen('mainScreen');
     }
 }
@@ -46,11 +47,34 @@ joinButton = function(){
     changeScreen('browseScreen');
 }
 
+connectButton = function(){
+    myClient.connect(document.getElementById('input_ip').value, document.getElementById('input_port').value)
+}
+
 backButton = function(){
     if(backStack.length > 0){
         backStack.pop();
         changeScreen(backStack.pop());
     }
+}
+
+addLobby = function(info){
+    var lobby = document.createElement('div');
+    var serverName = document.createElement('div');
+    var serverPlayers = document.createElement('div');
+    lobby.classList.add('lobby')
+    serverName.style.textAlign = 'left';
+    serverName.innerHTML = info.servername;
+    serverPlayers.style.textAlign = 'right';
+    serverPlayers.innerHTML = info.currentplayers + '/' + info.maxplayers;
+
+    lobby.appendChild(serverName);
+    lobby.appendChild(serverPlayers);
+    document.getElementById('lobbies').appendChild(lobby);
+}
+
+refreshButton = function(){
+    document.getElementById('lobbies').innerHTML = '';
 }
 
 changeScreen('loginScreen');
